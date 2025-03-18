@@ -21,7 +21,7 @@ export default class EmberChart extends Component {
 
     if (registrations) {
       registrations.forEach((registration) => {
-        chart.register(registration);
+        Chart.register(registration);
       });
     }
 
