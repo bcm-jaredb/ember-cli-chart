@@ -1,6 +1,6 @@
 import Component from '@glimmer/component';
 import { action } from '@ember/object';
-import Chart from 'chart.js/auto';
+import { Chart } from 'chart.js';
 
 export default class EmberChart extends Component {
   constructor() {
