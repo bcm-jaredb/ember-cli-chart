@@ -22,7 +22,7 @@ export default class EmberChart extends Component {
 
     if (globals) {
       globals.forEach((plugin) => {
-        Chart.register(plugin);
+        Chart.pluginService.register(plugin);
       });
     }
 
