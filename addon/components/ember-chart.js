@@ -19,12 +19,6 @@ export default class EmberChart extends Component {
       plugins,
     });
 
-    if (registrations) {
-      registrations.forEach((registration) => {
-        Chart.register(registration);
-      });
-    }
-
     this.chart = chart;
   }
 
