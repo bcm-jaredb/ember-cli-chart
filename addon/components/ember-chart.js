@@ -11,13 +11,19 @@ export default class EmberChart extends Component {
 
   @action
   drawChart(element) {
-    let { data, type, options, plugins } = this.args;
+    let { data, type, options, plugins, registrations } = this.args;
     let chart = new Chart(element, {
       type,
       data,
       options,
       plugins,
     });
+
+    if (registrations) {
+      registrations.forEach((registration) => {
+        chart.register(registration);
+      });
+    }
 
     this.chart = chart;
   }
